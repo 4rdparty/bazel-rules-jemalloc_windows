@@ -1,0 +1,3 @@
+#load("//bazel:repos.bzl", local_repos = "repos")
+
+#local_repos()

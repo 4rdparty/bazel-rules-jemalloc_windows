@@ -1,0 +1,14 @@
+#download jemalloc rule
+genrule(
+    name = "rule1",
+    outs = ["rule1.h"],
+    cmd_bash = "./jemalloc.bat && echo '' >$@",
+)
+
+cc_library(
+    name = "jemalloc",
+    srcs = [
+        "main.cc",
+        "rule1.h",
+    ],
+)
